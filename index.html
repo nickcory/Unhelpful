@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Unhelpful Countdown Timer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Unhelpful Timer</h1>
+
+    <div class="mode-switch">
+      <button id="mode-countdown">Countdown</button>
+      <button id="mode-stopwatch">Stopwatch</button>
+    </div>
+
+    <div id="countdown-controls">
+      <label for="time">Enter time in seconds:</label><br>
+      <input type="number" id="time" min="1"><br>
+    </div>
+
+    <label for="unit">Choose a unit:</label><br>
+    <select id="unit">
+      <option value="bananas">Banana Ripening Cycles</option>
+      <option value="sitcoms">90's Sitcom Episodes</option>
+      <option value="heartbeat">Mouse Heartbeats</option>
+      <option value="halflife">Cobalt-60 Half-Lives</option>
+      <option value="lightblink">Light in a Blink</option>
+      <option value="bee">Bee Wing Flaps</option>
+      <option value="pencils">Pencils Worn Out by Writing</option>
+    </select><br>
+
+    <button id="start">Start</button>
+    <button id="stop" style="display: none;">Stop</button>
+
+    <h2 id="display">Waiting for action...</h2>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+  background-color: #fefefe;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  border: 2px dashed #999;
+  padding: 2em;
+  border-radius: 10px;
+  background-color: #f0f0f0;
+}
+
+input, select, button {
+  margin: 10px;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.mode-switch {
+  margin-bottom: 10px;
+}
+
+#stop {
+  background-color: #e74c3c;
+  color: white;
+}

@@ -1,11 +1,38 @@
+/* Global Layout */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex:1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+
 body {
   font-family: sans-serif;
   background-color: #fefefe;
+  margin: 0;
+  padding: 0;
+}
+
+main {
   display: flex;
   justify-content: center;
-  align-items: center;
-  height: 100vh;
+  align-items: flex-start;
+  min-height: 100vh;
 }
+
 
 .container {
   text-align: center;
@@ -13,19 +40,95 @@ body {
   padding: 2em;
   border-radius: 10px;
   background-color: #f0f0f0;
+  max-width: 500px;
+  width: 90%;
+  margin-top: 40px;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
 }
 
-input, select, button {
+/* Mode Switch Buttons */
+.mode-switch {
+  margin-bottom: 20px;
+}
+
+.mode-switch button {
+  margin: 0 5px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Inputs, Selects, Buttons */
+input,
+select,
+button {
   margin: 10px;
   padding: 8px;
   font-size: 1rem;
 }
 
-.mode-switch {
-  margin-bottom: 10px;
+/* Toggle Button (Start/Stop) */
+#toggle {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
 }
 
-#stop {
+#toggle.stop {
   background-color: #e74c3c;
-  color: white;
 }
+
+/* Reset Button */
+#reset {
+  background-color: #aaa;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+/* Countdown/Stopwatch Section */
+#countdown-stopwatch-section {
+  margin-top: 20px;
+}
+
+/* Conversion Table Section */
+#conversion-table-section {
+  margin-top: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+#conversion-table-section input,
+#conversion-table-section button {
+  display: block;
+  margin: 10px auto;
+  width: 80%;
+  max-width: 300px;
+}
+
+#conversion-table {
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+}
+
+#conversion-table th,
+#conversion-table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: left;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+#conversion-table th {
+  background-color: #f2f2f2;
+}
+
+
+

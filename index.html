@@ -1,41 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Unhelpful Countdown Timer</title>
+  <title>Unhelpful Timer</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <div class="container">
-    <h1>Unhelpful Timer</h1>
+  <div class="page-wrapper">
+    <main>
+      <div class="container">
+        <h1>Unhelpful Timer</h1>
 
-    <div class="mode-switch">
-      <button id="mode-countdown">Countdown</button>
-      <button id="mode-stopwatch">Stopwatch</button>
-    </div>
+        <!-- Mode Selection -->
+        <div class="mode-switch">
+          <button id="mode-countdown">Countdown</button>
+          <button id="mode-stopwatch">Stopwatch</button>
+          <button id="mode-conversion">Conversion Table</button>
+        </div>
 
-    <div id="countdown-controls">
-      <label for="time">Enter time in seconds:</label><br>
-      <input type="number" id="time" min="1"><br>
-    </div>
+        <!-- Countdown + Stopwatch Section -->
+        <div id="countdown-stopwatch-section">
+          <div id="countdown-controls">
+            <label for="time">Enter time in seconds:</label><br>
+            <input type="number" id="time" min="1"><br>
+          </div>
 
-    <label for="unit">Choose a unit:</label><br>
-    <select id="unit">
-      <option value="bananas">Banana Ripening Cycles</option>
-      <option value="sitcoms">90's Sitcom Episodes</option>
-      <option value="heartbeat">Mouse Heartbeats</option>
-      <option value="halflife">Cobalt-60 Half-Lives</option>
-      <option value="lightblink">Light in a Blink</option>
-      <option value="bee">Bee Wing Flaps</option>
-      <option value="pencils">Pencils Worn Out by Writing</option>
-    </select><br>
+          <label for="unit">Choose a unit:</label><br>
+          <select id="unit">
+            <option value="bananas">Banana Ripening Cycles</option>
+            <option value="sitcom">90's Sitcom Episodes</option>
+            <option value="heartbeat">Mouse Heartbeats</option>
+            <option value="halflife">Cobalt-60 Half-Lives</option>
+            <option value="lightblink">Light in a Blink</option>
+            <option value="beewing">Bee Wing Flaps</option>
+            <option value="pencil">Pencils Worn Out by Writing</option>
+          </select><br>
 
-    <button id="start">Start</button>
-    <button id="stop" style="display: none;">Stop</button>
+          <button id="toggle">Start</button>
+          <button id="reset">Reset</button>
 
-    <h2 id="display">Waiting for action...</h2>
+          <h2 id="display">Waiting for action...</h2>
+        </div>
+
+        <!-- Conversion Table Section -->
+        <div id="conversion-table-section" style="display: none;">
+          <label for="convert-seconds">Enter seconds to convert:</label><br>
+          <input type="number" id="convert-seconds" min="1">
+          <button id="convert-button">Convert</button>
+
+          <table id="conversion-table" style="display:none;">
+            <thead>
+              <tr>
+                <th>Unit</th>
+                <th>Value</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+
+    </main>
+
+
   </div>
 
   <script src="script.js"></script>
 </body>
+
 </html>
